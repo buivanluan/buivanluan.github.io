@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>trang chủ</title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+		div.container{
+			width: 1170px;
+			margin: 0 auto;
+			display: table;
+		}
+		div.nav{
+			width: 100%;
+			display: table;
+			padding: 15px 55px;
+		}
+		.nav li{
+			float: left;
+			list-style-type: none;
+			padding: 20px 50px;
+			border: 2px solid #ff9600;
+			border-radius: 10px;
+		}
+		#banner{
+			position: relative;
+			border-bottom: 5px solid #ff9600;
+			z-index: 1;
+		}
+		#banner p{
+			    position: absolute;
+			    top: 370px;
+			    right: 77px;
+			    font-size: 20px;
+			    color: #fff;
+		}
+		#banner img{
+			width: 100%;
+			height: 400px;
+		}
+		.nav li ul li{
+			display: none;
+			float: none;
+			padding:0px;
+			font-size: 12px;
+			background: #fff;
+
+		}
+		.nav li ul li a{
+			padding: 10px;
+			display: table;
+		}
+		.nav1{
+			z-index: 2;
+		}
+		.nav li a{
+			text-decoration: none;
+			color: #131DE4;
+			font-size: 20px;
+			font-weight: bold;
+		}
+		
+		.nav li:hover .nav1 li{
+			display: block;
+		}
+		.nav:hover li:hover{
+			border-bottom: 5px solid #ff9600;
+	
+
+
+		}
+		.nav{
+			position: relative;
+			z-index: 3;
+
+		}
+		.nav1{
+			position: absolute;
+			right: 550px;
+    		top: 60px;
+
+		}
+		#sale{
+			background:#EDFBFB; 
+		}
+		@keyframes sale1{
+			0%{opacity: 1}
+			50%{opacity: 0}
+			100%{opacity: 1}
+		}
+		@keyframes sale2{
+			0%{opacity: 0}
+			50%{opacity: 1}
+			100%{opacity: 0}
+		}
+		@keyframes menu1{
+			0%{opacity: 0}
+			50%{opacity: 1}
+		}
+		#sale{
+			border-top: 5px solid #ff9600;
+			display: table;
+			width: 100%;
+			position: relative;
+		}
+		#sale1{
+			width:50%;
+			float: left;
+			animation: sale1 3s ease  infinite;
+
+			
+		}
+		#sale2{
+			position: relative;
+			width:50%;
+			float: left;
+			animation: sale2 3s ease  infinite;
+		}
+		
+		#sale1 img{ 
+			width: 100%;
+			height: 300px;
+		 }
+		#sale2 img{ 
+			width: 100%;
+			height: 300px;
+		 }
+		#sale3 img{
+			    z-index: 2;
+			    width: 158px;
+			    position: absolute;
+			    right: 510px;
+			    top: 0px;
+		}
+		#menu{
+			padding-top: 10px;
+			border-top: 5px solid #ff9600;
+			position: relative;
+
+		}
+		#menu1 h1{
+			margin: 0 auto;
+			color: blue;
+			padding: 10px;
+			display: table;
+			border-bottom: 5px solid #ff9600;
+
+		}
+		#menu1 img{
+			width: 100px;
+			width: 100px;
+			position: absolute;
+			top: -20px;
+    		right: 420px;
+    		animation: menu1 0.5s ease infinite;
+		}
+		#menu2{
+			padding-top: 10px;
+		}
+		#mon1{
+			width: 25%;
+			border:1px solid #ff9600;
+			padding: 5px;
+			float: left;
+			border-radius: 5px;
+			
+
+		}
+		#mon1 img{
+			width: 100%;
+			height: 200px;
+			
+
+		}
+		#mon1 a{
+			font-size: 16px;
+			padding: 10px;
+			font-weight: bold;
+			text-align: center;
+			font-style: italic;
+			display: block;
+			color: black;
+			text-decoration: none;
+
+		}
+		#icon1{
+			position: relative;
+		}
+		#icon1 img{
+			width: 115px;
+		    height: 50px;
+		    position: absolute;
+		    right: -5px;
+		    top: -255px;
+		}
+		#mon1:hover{
+				padding: 5px 0;
+		}
+		#mon1:hover a{
+			color: #ff9600;
+		}
+		@keyframes footer{
+			0%{color: #fff;}
+			50%{color: red;}
+		}
+		footer{
+			width: 100%;
+			margin-top:10px;
+			border: 1px solid #ff9600;
+			display: table;
+			position: relative;
+			
+			
+		}
+		footer p{
+			font-size: 20px;
+			font-weight: bold;
+			color: #fff;
+		}
+		footer img{
+			width: 100%;
+		}
+		footer #foot1{
+			position: absolute;
+			    left: 15px;
+    			top: 160px;
+	
+		}
+		footer #foot2{
+			position: absolute;
+			    right: 0;
+    			top: 160px
+		}
+		footer h1{
+			color: #fff;
+			position: absolute;
+			left: 400px;
+    		top: 0px;
+    		font-style: italic;
+    		animation: footer 1s ease infinite;
+
+		}
+		footer li{
+			list-style-type: none;
+			padding: 15px;
+			float: left;
+		}
+		footer li a{
+			font-weight: bold;
+			font-size: 20px;
+			color: #fff;
+			text-decoration: none;
+		}
+		footer li:hover a{
+			font-size: 1.5em;
+			color: #F5063E;
+
+		}
+
+		
+	</style>
+</head>
+<body>
+<div class="container">
+	<div id="banner">
+		<img src="images/bienhieu.png" alt="">
+		<p>Địa chỉ: 100 Nguyễn Khánh Toàn, Cầu giấy, Hà Nội</p>
+	</div>
+	<div class="nav">
+		<ul>
+			<li><a href="sale.html" title="">Trang chủ</a></li>
+			<li><a href="trangchu.html" title="">Thông tin</a></li>
+			<li>
+				<a href="" title="">Thực đơn</a>
+				<ul class="nav1">
+					<li><a href="nuong.html" title="">Món nướng</a></li>
+					<li><a href="lau.html" title="">Món lẩu</a></li>
+					<li><a href="xao.html" title="">Món xào</a></li>
+				</ul>
+			</li>
+			<li><a href="chitiet.html" title="">Tin tức</a></li>
+			<li><a href="" title="">Góp ý</a></li>
+			<li><a href="" title="">Liên hệ</a></li>
+			
+		</ul>
+	</div>	
+	<div id="sale">
+		<div id="sale1">
+			<img src="images/sale1.png" alt="">
+			
+		</div>
+		<div id="sale2">
+			<img src="images/sale2.png" alt="">
+			
+		</div>
+		<div id="sale3">
+			<img src="images/sale3.png" alt="">
+		</div>
+
+	</div>
+	<div id="menu">
+		<div id="menu1">
+			<h1>Thực đơn</h1>			
+			<img src="images/icon2.png" alt="">
+		</div>
+		<div id="menu2">
+			<div id="mon1">
+				<a href="chitietlau.html" title=""><img src="images/lau10.png" alt=""></a>
+				<a href="chitietlau.html" title="">Lẩu cua biển</a>
+				<div id="icon1">
+					<img src="images/icon1.png" alt="">
+				</div>
+			</div>
+			<div id="mon1">
+				<a href="chitietlau.html" title=""><img src="images/lau11.png" alt=""></a>
+				<a href="chitietlau.html" title="">Lẩu gà lá giang</a>
+			</div>
+			<div id="mon1">
+				<a href="chitietlau.html" title=""><img src="images/lau12.png" alt=""></a>
+				<a href="chitietlau.html" title="">Lẩu hải sản</a>
+				<div id="icon1">
+					<img src="images/icon1.png" alt="">
+				</div>
+			</div>
+			<div id="mon1">
+				<a href="chitietlau.html" title=""><img src="images/lau9.png" alt=""></a>
+				<a href="chitietlau.html" title="">Lẩu cá trắm</a>
+			</div>
+			<div id="mon1">
+				<a href="chitietnuong.html" title=""><img src="images/nuong1.png" alt=""></a>
+				<a href="chitietnuong.html" title="">Ngêu nướng mỡ chài</a>
+			</div>
+			<div id="mon1">
+				<a href="chitietnuong.html" title=""><img src="images/nuong2.png" alt=""></a>
+				<a href="chitietnuong.html" title="">Phi lê cá nướng xiên</a>
+				<div id="icon1">
+					<img src="images/icon1.png" alt="">
+				</div>
+			</div>
+			<div id="mon1">
+				<a href="chitietnuong.html" title=""><img src="images/nuong3.png" alt=""></a>
+				<a href="chitietnuong.html" title="">Thăn heo nướng trà xanh</a>
+				<div id="icon1">
+					<img src="images/icon1.png" alt="">
+				</div>
+			</div>
+			<div id="mon1">
+				<a href="chitietnuong.html" title=""><img src="images/nuong4.png" alt=""></a>
+				<a href="chitietnuong.html" title="">Nem nướng chuối hột ngâm</a>
+			</div>
+			<div id="mon1">
+				<a href="chitietxao.html" title=""><img src="images/xao1.png" alt=""></a>
+				<a href="chitietxao.html" title="">Thịt bò viên xào nấm kim châm</a>
+				<div id="icon1">
+					<img src="images/icon1.png" alt="">
+				</div>
+			</div>
+			<div id="mon1">
+				<a href="chitietxao.html" title=""><img src="images/xao2.png" alt=""></a>
+				<a href="chitietxao.html" title="">Tim heo xào nước chuông xa tế</a>
+				<div id="icon1">
+					<img src="images/icon1.png" alt="">
+				</div>
+			</div>
+			<div id="mon1">
+				<a href="chitietxao.html" title=""><img src="images/xao3.png" alt=""></a>
+				<a href="chitietxao.html" title="">Tôm xào hạt điều đậu hà lan</a>
+			</div>
+			<div id="mon1">
+				<a href="chitietxao.html" title=""><img src="images/xao4.png" alt=""></a>
+				<a href="chitietxao.html" title="">Bông cải xào tiêu xanh</a>
+			</div>
+			
+		</div>
+	</div>
+	<footer>
+			<img src="images/bienhieu1.png" alt="">
+			<h1>Hãy đến và cảm nhận</h1>
+			<div id="foot1">
+				<ul>
+					<li><a href="sale.html" title="">Trang chủ</a></li>
+					<li><a href="trangchu.html" title="">Thông tin</a></li>
+					<li><a href="" title="">Thực đơn</a></li>
+					<li><a href="chitiet.html" title="">Tin tức</a></li>
+					<li><a href="" title="">Góp ý</a></li>
+					<li><a href="" title="">Liên hệ</a></li>
+			
+				</ul>
+			</div>
+			<div id="foot2">
+				<p >Địa chỉ: 100 Nguyễn Khánh Toàn, Cầu Giấy, Hà Nội</p>
+				<p >Điện thoại: 090.999.999</p>
+			</div>
+			
+	</footer>
+</div>	
+</body>
+</html>

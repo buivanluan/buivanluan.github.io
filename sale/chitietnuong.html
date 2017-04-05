@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>chi tiết nướng</title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+		div.container{
+			width: 1170px;
+			margin: 0 auto;
+			display: table;
+		}
+		div.nav{
+			width: 100%;
+			display: table;
+			padding: 15px 55px;
+		}
+		.nav li{
+			float: left;
+			list-style-type: none;
+			padding: 20px 50px;
+			border: 2px solid #ff9600;
+			border-radius: 10px;
+		}
+		#banner{
+			position: relative;
+			border-bottom: 5px solid #ff9600;
+			z-index: 1;
+		}
+		#banner p{
+			    position: absolute;
+			    top: 370px;
+			    right: 77px;
+			    font-size: 20px;
+			    color: #fff;
+		}
+		#banner img{
+			width: 100%;
+			height: 400px;
+		}
+		.nav li ul li{
+			display: none;
+			float: none;
+			padding:0px;
+			font-size: 12px;
+			background: #fff;
+
+		}
+		.nav li ul li a{
+			padding: 10px;
+			display: table;
+		}
+		.nav1{
+			z-index: 2;
+		}
+		.nav li a{
+			text-decoration: none;
+			color: #131DE4;
+			font-size: 20px;
+			font-weight: bold;
+		}
+		
+		.nav li:hover .nav1 li{
+			display: block;
+		}
+		.nav:hover li:hover{
+			border-bottom: 5px solid #ff9600;
+	
+
+
+		}
+		.nav{position: relative;
+
+		}
+		.nav1{
+			position: absolute;
+			right: 550px;
+    		top: 60px;
+
+		}
+		
+		@keyframes menu1{
+			0%{opacity: 0}
+			50%{opacity: 1}
+		}
+		@keyframes footer{
+			0%{color: #fff;}
+			50%{color: red;}
+		}
+		
+		#menu{
+			padding-top: 10px;
+			border-top: 5px solid #ff9600;
+			position: relative;
+
+		}
+		#menu1 h1{
+			margin: 0 auto;
+			color: blue;
+			padding: 10px;
+			display: table;
+			border-bottom: 5px solid #ff9600;
+
+		}
+		#menu1 img{
+			width: 100px;
+			width: 100px;
+			position: absolute;
+			top: -20px;
+    		right: 420px;
+    		animation: menu1 0.5s ease infinite;
+		}
+		#menu2, #menu3{
+			padding-top: 10px;
+			width: 50%;
+			float: left;
+		}
+
+		#menu2 img{
+			width: 100%;
+		}
+		#icon1 img{
+			width: 200px;
+			height: 100px;
+			position: absolute;
+			right: 530px;
+    		top: 70px;
+		}
+		#menu3 li{
+			padding: 20px 50px;
+			font-size: 20px;
+			list-style-position: inside;
+		}
+		span{
+			color: red;
+			text-decoration: line-through;
+		}
+		
+		footer{
+			width: 100%;
+			margin-top:10px;
+			border: 1px solid #ff9600;
+			display: table;
+			position: relative;
+			
+			
+		}
+		footer p{
+			font-size: 20px;
+			font-weight: bold;
+			color: #fff;
+		}
+		footer img{
+			width: 100%;
+		}
+		footer #foot1{
+			position: absolute;
+			    left: 15px;
+    			top: 160px;
+	
+		}
+		footer #foot2{
+			position: absolute;
+			    right: 0;
+    			top: 160px
+		}
+		footer h1{
+			color: #fff;
+			position: absolute;
+			left: 400px;
+    		top: 0px;
+    		font-style: italic;
+    		animation: footer 1s ease infinite;
+
+		}
+		footer li{
+			list-style-type: none;
+			padding: 15px;
+			float: left;
+		}
+		footer li a{
+			font-weight: bold;
+			font-size: 20px;
+			color: #fff;
+			text-decoration: none;
+		}
+		footer li:hover a{
+			font-size: 1.5em;
+			color: #F5063E;
+
+		}
+		
+	</style>
+</head>
+<body>
+<div class="container">
+	<div id="banner">
+		<img src="images/bienhieu.png" alt="">
+		<p>Địa chỉ: 100 Nguyễn Khánh Toàn, Cầu giấy, Hà Nội</p>
+	</div>
+	<div class="nav">
+		<ul>
+			<li><a href="sale.html" title="">Trang chủ</a></li>
+			<li><a href="trangchu.html" title="">Thông tin</a></li>
+			<li>
+				<a href="" title="">Thực đơn</a>
+				<ul class="nav1">
+					<li><a href="nuong.html" title="">Món nướng</a></li>
+					<li><a href="lau.html" title="">Món lẩu</a></li>
+					<li><a href="xao.html" title="">Món xào</a></li>
+				</ul>
+			</li>
+			<li><a href="" title="">Tin tức</a></li>
+			<li><a href="" title="">Góp ý</a></li>
+			<li><a href="" title="">Liên hệ</a></li>
+			
+		</ul>
+	</div>	
+	
+	<div id="menu">
+		<div id="menu1">
+			<h1>ngêu nướng mỡ chài</h1>			
+			
+		</div>
+			<div id="menu2">
+				<img src="images/nuong1.png" alt="">
+				<div id="icon1">
+					<img src="images/icon1.png" alt="">
+				</div>
+			</div>
+			
+		<div id="menu3">
+			<ul>
+				<li>Nghêu - loại hải sản bổ, được biến tấu với mỡ chài cho món ăn thơm ngon béo ngậy đầy hấp dẫn cùng rau sống, nước chấm.</li>
+				<li>Giá thành: 200.000 vnđ/xuất   <span> giá cũ:300.000 vnđ/xuất</span></li>
+				<li>bàn 6 người giảm 100.000 vnđ/bàn</li>
+			</ul>
+		</div>
+		
+	</div>
+	<footer>
+			<img src="images/bienhieu1.png" alt="">
+			<h1>Hãy đến và cảm nhận</h1>
+			<div id="foot1">
+				<ul>
+					<li><a href="sale.html" title="">Trang chủ</a></li>
+					<li><a href="trangchu.html" title="">Thông tin</a></li>
+					<li><a href="" title="">Thực đơn</a></li>
+					<li><a href="chitiet.html" title="">Tin tức</a></li>
+					<li><a href="" title="">Góp ý</a></li>
+					<li><a href="" title="">Liên hệ</a></li>
+			
+				</ul>
+			</div>
+			<div id="foot2">
+				<p >Địa chỉ: 100 Nguyễn Khánh Toàn, Cầu Giấy, Hà Nội</p>
+				<p >Điện thoại: 090.999.999</p>
+			</div>
+			
+	</footer>
+</div>	
+</body>
+</html>

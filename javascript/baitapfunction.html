@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>javascript</title>
+	<link rel="stylesheet" href="">
+	<script >
+	
+
+		var teacher = {
+			  firstName: "Kim",
+			  lastName: "Dung",
+			  age: 30,
+			  say: function(){}
+			}
+		var student = {
+			  firstName: "jsdhf",
+			  lastName: "loc",
+			  age: 34,
+			  say: function(){}
+			}
+		var child = {
+			  firstName: "bui",
+			  lastName: "to",
+			  age: 37,
+			  say: function(){}
+			}
+
+		var aboutMe = function(){
+			  text1 = "xin chao, toi la: "
+			  text2 = ". Nam nay toi "
+			  text3 = " tuoi."
+			  console.log(text1 + this.firstName + " " + this.lastName + text2 + this.age +text3)
+			}
+
+			teacher.say = aboutMe;
+			student.say = aboutMe;
+			child.say = aboutMe;
+
+			 
+			 // In ra màn hình dòng chữ "Xin chào, tôi là Kim Dung. Năm nay tôi 30 tuổi."
+	
+	</script>
+
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background: #129CD5;
+    }
+    
+    .container {
+        width: 900px;
+        margin: 100px auto;
+        background: #0DE9F7;
+        display: table;
+        border-radius: 5px;
+    }
+    
+    .question {
+        width: 98%;
+        margin: 1%;
+        background: #fff;
+        border-radius: 5px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .answer {
+        width: 48%;
+        float: left;
+        margin: 1%;
+        background: #fff;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 20px;
+        height: 50px;
+        line-height: 50px;
+    }
+    
+    h1 {
+        text-align: center;
+        padding: 30px;
+    }
+    
+    .check {
+        width: 98%;
+        margin: 1%;
+        height: 50px;
+        background: #fff;
+        border-radius: 5px;
+        float: left;
+        font-size: 30px;
+        text-align: center;
+        line-height: 50px;
+    }
+    
+    .ketqua {
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    .ketqua img {
+        width: 100%;
+    }
+    
+    .back {
+        background: black;
+        height: 100px;
+        width: 100%;
+    }
+    
+    .check:hover {
+        background: #E5FBF9;
+        box-shadow: 0 0 2px 2px blue;
+    }
+    
+    .answer:hover {
+        background: #E5FBF9;
+        box-shadow: 0 0 2px 2px blue;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Ca nhạc</h1>
+        <div class="question">
+        </div>
+        <div class="answer">
+        </div>
+        <div class="answer">
+        </div>
+        <div class="answer">
+        </div>
+        <div class="answer">
+        </div>
+        <div class="check">
+            <p>Kế Tiếp</p </div>
+        </div>
+    </div>
+    <script>
+    var quiz = {
+        question: ['bài hát "Em của ngày hôm qua" do ai sáng tác?', 'bài hát "Mùa đông không lạnh" do ca sỹ nào thể hiện?', 'Nam ca sỹ "Phạm Trưởng" từng là thành viên nhóm nhạc nào?'],
+        answer: ['Sơn Tùng MTP', 'Akira Phan', 'Weboy'],
+        answer0: ['Sơn Tùng MTP', 'Khánh Phương', 'Miu Lê', 'Phạm Trưởng'],
+        answer1: ['Khánh Phương', 'Akira Phan', 'Quách Thành Danh', 'Chi Dân'],
+        answer2: ['365 Band', '1088', 'Weboy', 'Ba qua dưa hấu'],
+
+    }
+    var test = [];
+
+    var n = 0;
+    var m = [];
+
+    document.getElementsByClassName("check")[0].addEventListener("click", check1);
+    print();
+
+    function print() {
+        var z = quiz['answer'][n];
+        if (n == 2) {
+            document.getElementsByClassName("check")[0].innerHTML = "Kết quả";
+
+
+        }
+
+        document.getElementsByClassName('question')[0].innerHTML = "Câu hỏi " + (n + 1) + ":" + quiz['question'][n];
+
+        for (var x in quiz) {
+            if (x[x.length - 1] == n) {
+
+
+                for (var j = 0; j < document.getElementsByClassName('answer').length; j++) {
+
+                    document.getElementsByClassName('answer')[j].innerHTML = quiz[x][j];
+                }
+            }
+        }
+        for (var i = 0; i <= document.getElementsByClassName('answer').length - 1; i++) {
+
+            document.getElementsByClassName("answer")[i].addEventListener("click", click1);
+
+        }
+
+        function click1() {
+            if (this.innerHTML == z) {
+                this.style.background = "green";
+                test.push(true)
+
+                for (var i = 0; i <= document.getElementsByClassName('answer').length - 1; i++) {
+                    document.getElementsByClassName("answer")[i].removeEventListener("click", click1);
+                }
+
+            } else {
+                this.style.background = "red";
+                test.push(false)
+
+                for (var i = 0; i <= document.getElementsByClassName('answer').length - 1; i++) {
+                    document.getElementsByClassName("answer")[i].removeEventListener("click", click1);
+                }
+            }
+
+        }
+
+
+    }
+
+    function clear() {
+        for (var i = 0; i <= document.getElementsByClassName('answer').length - 1; i++) {
+            document.getElementsByClassName("answer")[i].style.background = "#fff";
+            document.getElementsByClassName('answer')[i].innerHTML = "";
+        }
+    }
+
+    function check1() {
+        if (test.length - 1 == n) {
+            if (n < quiz["question"].length - 1) {
+                n += 1;
+                clear()
+                print();
+            } else {
+                for (var i = 0; i < test.length; i++) {
+                    if (test[i] == false) {
+                        m.push(i + 1)
+                    }
+                }
+                console.log(m)
+                if (m.length == 0) {
+                    addclass()
+
+                    document.getElementsByClassName('ketqua')[0].innerHTML = '<img src="http://88.cloudjetsolutions.com/wp-content/uploads/2013/11/22.jpg" alt="">'
+                } else {
+                    addclass()
+                    back()
+                    document.getElementsByClassName('ketqua')[0].innerHTML = "Bạn đã trả lời sai câu hỏi thứ :" + m
+                }
+            }
+        }
+    }
+
+    function addclass() {
+        while (document.getElementsByClassName("container")[0].firstChild) {
+            document.getElementsByClassName("container")[0].removeChild(document.getElementsByClassName("container")[0].firstChild)
+        }
+        var t = document.createElement("div");
+        document.getElementsByClassName("container")[0].appendChild(t);
+        t.classList.add("ketqua");
+    }
+
+    function back() {
+        var u = document.createElement("div");
+        document.getElementsByClassName("container")[0].appendChild(u);
+        u.classList.add("back");
+        document.getElementsByClassName("back")[0].addEventListener("click", back1);
+
+        function back1() {
+            location.href = "file:///C:/Users/luan/Desktop/techmaster/buivanluan.github.io/javascript/calculator/Quiz.html";
+        }
+
+
+
+
+    }
+    
+    </script>
+</body>
+
+</html>

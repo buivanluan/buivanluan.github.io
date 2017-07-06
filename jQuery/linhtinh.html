@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+.flip-container {
+	perspective: 1000;
+}
+/* flip the pane when hovered */
+.flip-container:active .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+ 
+/* Kích thước các mặt */
+.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
+}
+ 
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+ 
+	position: relative;
+}
+ 
+/* hide back of pane during swap - Ẩn các mặt sau (back face) khi hoán chuyển các mặt */
+.front, .back {
+	backface-visibility: hidden;
+ 
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+ 
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+ 
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+	</style>
+</head>
+<body>
+	<div class="flip-container" onclick="this.classList.toggle('active');">
+	<div class="flipper">
+		<div class="front">
+			<!-- front content -->
+			<img src="http://topanhdep.net/wp-content/uploads/2015/09/hinh-anh-pokemon-1.jpg" alt="">
+		</div>
+		<div class="back">
+			<!-- back content -->
+			<img src="https://s-media-cache-ak0.pinimg.com/736x/a3/9e/59/a39e5985ee8268299e5d9b82a155e64c.jpg" alt="">
+		</div>
+	</div>
+</div>
+</body>
+</html>

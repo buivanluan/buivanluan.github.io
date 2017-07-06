@@ -1,0 +1,51 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	font-size: 20px;
+}
+table,tr,td,th{
+	border: 2px solid #7D13D6;
+	padding: 10px;
+	text-align: center;
+}
+td{
+	width: 200px;
+}
+table{
+	border-collapse: collapse;
+
+}
+.fa{
+	display: block;
+}
+#fa0-1,#fa1-1,#fa2-1,#fa3-1,#fa4-1,#fa5-1{
+	display: block;
+}
+th{
+	padding-right: 20px;
+	position: relative;
+}
+.fa-sort{
+	position: absolute;
+	top: 33px;
+	right: 5px;
+}
+.fa-caret-down{
+	position: absolute;
+	top: 37px;
+	right: 5px;
+}
+.fa-caret-up{
+	position: absolute;
+	top: 27px;
+	right: 5px;
+}
+.hover{
+	background: #C7C0C0 !important;
+	font-size: 1.01em;
+	opacity: 1 !important;
+}
+tr:nth-child(even){
+	background: #E6E3E3;
+}

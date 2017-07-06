@@ -1,0 +1,497 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: luanpro;
+	perspective: 1000;
+}
+
+
+header{
+	background-image: url('https://static.ticketbox.vn/static-page/img2/20170404_rmfbyjetstar2017/Banner.jpg');
+	background-size:100%;	
+	height: 660px;
+}
+@font-face{
+	font-family: luan;
+	src:url("../UTM Swiss 721 Black Condensed.ttf");
+}
+@font-face{
+	font-family: luanpro;
+	src:url("../UVNHongHaHep_R.ttf");
+}
+
+
+
+nav ul li {
+	list-style-type: none;
+	display: inline-block;	
+}
+
+nav{
+	
+	font-family: luan;
+}
+nav ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+nav ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 25px;
+	padding: 0 30px;
+	font-family: luan;
+	text-transform: uppercase;
+	
+
+}
+nav ul li a:hover{
+	color: #ec7541;
+}
+nav ul li a img{
+	width: 200px;
+	
+}
+
+.banner img{
+	display: block;
+	margin: 60px auto;
+
+}
+.head{
+	background-image: url("https://static.ticketbox.vn/static-page/img2/20170404_rmfbyjetstar2017/intro.png");
+	
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 800px;
+	margin: 0 auto;
+	padding: 50px;
+}
+.head p{
+	padding: 10px;
+	font-size: 19px;
+	text-align: justify;
+	text-align-last: center;
+}
+.content{
+	background-image: url("https://static.ticketbox.vn/static-page/img2/20170404_rmfbyjetstar2017/bg.jpg");
+	background-size: 100%;
+	background-repeat: repeat-y;
+	color: #fff;
+	transition: all 2s;
+
+}
+#international,#nation,#ticket{
+	width: 80%;
+	margin: 0 auto;
+	background: black;
+	border-radius: 10px;
+	box-shadow: 0px 0px 30px 5px #ec7541;
+}
+
+h1{
+	font-size: 30px;
+	text-align: center;
+	padding: 60px;
+}
+.giant{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+	
+
+}
+
+.common{
+	width: 27%;
+
+	
+
+	
+}
+.common img:hover{
+	box-shadow: 0 0 20px 5px  #ec7541;
+}
+.avartar{
+	width: 100%;
+}
+.font img, .avartar img{
+	width: 100%;
+	height: 495px;
+
+}
+.avartar1{
+	width: 40%;
+	display: block;
+	float: left;
+	margin: 30px 0;
+}
+.avartar1 img{
+	width: 100%;
+	
+}
+.note1 p{
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #F3330D;
+	font-family: luan;
+	text-align: center;
+	
+
+
+}
+@keyframes image-left{
+	0%{
+		transform: translate(10px,-20px);
+		width: 320px;
+		height: 495px;
+	}
+	50%{
+		transform: translate(10px,-40px);
+		width: 320px;
+		height: 495px;
+	}
+	100%{
+		transform: translate(0,0);
+		width: 450px;
+		height: 650px;
+	}
+}
+@keyframes image-center{
+	0%{
+		transform: translate(410px,-20px);
+		width: 320px;
+		height: 495px;
+	}
+	50%{
+		transform: translate(410px,-40px);
+		width: 320px;
+		height: 495px;
+	}
+	100%{
+		transform: translate(0,0);
+		width: 450px;
+		height: 650px;
+	}
+}
+@keyframes image-center-back{
+	0%{
+		transform: translate(0,0);
+		width: 450px;
+		height: 650px;
+	}
+	50%{
+		transform: translate(410px,-40px);
+		width: 320px;
+		height: 495px;
+	}
+	100%{
+		transform: translate(410px,-20px);
+		width: 320px;
+		height: 495px;
+		
+	}
+}
+@keyframes image-right{
+	0%{
+		transform: translate(810px,-20px);
+		width: 320px;
+		height: 495px;
+	}
+	50%{
+		transform: translate(810px,-40px);
+		width: 320px;
+		height: 495px;
+	}
+	100%{
+		transform: translate(0,0);
+		width: 450px;
+		height: 650px;
+	}
+}
+@keyframes image-right-back{
+	0%{
+		transform: translate(0,0);
+		width: 450px;
+		height: 650px;
+	}
+	50%{
+		transform: translate(810px,-40px);
+		width: 320px;
+		height: 495px;
+	}
+	100%{
+		transform: translate(810px,-20px);
+		width: 320px;
+		height: 495px;
+		
+	}
+}
+@keyframes text{
+	0%{
+		transform: translate(-100px,0);
+		opacity: 0;
+		
+	}
+	90%{
+		transform: translate(-100px,0);
+		opacity: 0;
+		
+	}
+	
+	100%{
+		transform: translate(0,0);
+		opacity: 1;
+	}
+}
+@keyframes text-back{
+	0%{
+		
+		transform: translate(0,0);
+		opacity: 1;
+	}
+	10%{
+		transform: translate(-100px,0);
+		opacity: 0;
+		
+	}
+	
+	100%{
+		transform: translate(-100px,0);
+		opacity: 0;
+		
+	}
+}
+@keyframes image-left-back{
+	0%{
+		transform: translate(0,0);
+		width: 450px;
+		height: 650px;
+	}
+	50%{
+		transform: translate(10px,-40px);
+		width: 320px;
+		height: 495px;
+	}
+	100%{
+		transform: translate(10px,-20px);
+		width: 320px;
+		height: 495px;
+		
+	}
+}
+.text-back{
+	animation: text-back 2s;
+}
+.left-back{
+	animation: image-left-back 2s;
+}
+.center-back{
+	animation: image-center-back 2s;
+}
+.right-back{
+	animation: image-right-back 2s;
+}
+@keyframes close{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.left{
+	animation: image-left 1s;
+
+	
+}
+.center{
+	animation: image-center 1s;
+	
+}
+.right{
+	animation: image-right 1s;
+	
+}
+.hidden{
+	display: none;
+	width: 100%;
+	clear: both;
+	padding: 20px;
+	border-radius: 10px;
+	position: relative;
+
+
+	
+}
+.fa{
+	color: #fff;
+	font-size: 50px;
+	animation: close 5s;
+	position: absolute;
+	top: 0;
+	right: 30px;
+}
+.subcribe, .note1{
+	float: left;
+	width: 60%;
+	padding: 30px;
+	
+
+
+
+}
+.subcribe p{
+	font-size: 20px;
+	text-align: justify;
+	padding: 10px;
+}
+.note p{
+	font-size: 20px;
+	margin: 15px;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #F3330D;
+	font-family: luan;
+	padding-bottom: 30px;
+}
+.font, .back{
+	width: 100%;
+}
+.back p{
+	width: 100%;
+	font-size: 18px;
+	text-align:justify;
+	margin: 15px;
+	padding: 20px;
+	height: 495px;
+	overflow-y: scroll;	
+	border: 2px solid #ec7541;
+	color: #fff;
+
+	}
+.chung{
+	width: 27%;
+	margin: 30px 0;
+	transform-style: preserve-3d;
+	position: relative;
+
+
+}
+.back{
+
+	transform: rotateY(-180deg);
+	transition: all 2s;
+	position: absolute;
+	top: 0;
+	left: 0px;
+	backface-visibility: hidden;
+
+}
+.font{
+	transform: rotateY(0deg);
+	transition: all 2s;
+	backface-visibility: hidden;
+
+}
+.nation{
+	display: table;
+}
+.chung:hover .font{
+transform: rotateY(-180deg);
+box-shadow: none;
+}
+.chung:hover .back{
+transform: rotateY(0deg);
+box-shadow: none;
+}
+
+::-webkit-scrollbar              { width: 30px;background: transparent;padding-right:5px;}
+::-webkit-scrollbar-button       { display: none }
+::-webkit-scrollbar-track        {display: none }
+::-webkit-scrollbar-track-piece  {background: transparent;}
+::-webkit-scrollbar-thumb        { background-color: #ec7541; border-radius: 5px; border: 12px solid black;border-radius: 15px;}
+::-webkit-scrollbar-corner       { display:none;}
+::-webkit-resizer                { display: none;}
+#ticket{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.ticket{
+	width: 28%;
+	height: 600px;
+	font-family: luan;
+	border: 4px solid #ec7541;
+	text-align: center;
+	margin: 30px;
+
+
+}
+.head-ticket{
+	height: 20%;
+	background: #ec7541;
+	border-bottom-left-radius: 40%;
+	border-bottom-right-radius: 40%;
+}
+.body{
+	height: 69%;
+}
+.footer{
+	height: 11%;
+	background: red;
+	border-top-right-radius: 40%;
+	border-top-left-radius: 40%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.header {
+
+	font-size: 30px;
+	font-weight: bold;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	color: black;
+}
+.ticket-note{
+	font-size: 20px;
+	color: black;
+	padding: 0;
+}
+.price{
+	font-size: 30px;
+	padding: 30px;
+	color: #ec7541;
+
+}
+.footer a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 30px;
+}
+.footer-left, .footer-right{
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer-left{
+	border-right: 1px solid black;
+}
+.footer-right{
+	border-left: 1px solid black;
+}
+.ticket:hover{
+	box-shadow: 0 0 20px 5px  #ec7541;
+}
+

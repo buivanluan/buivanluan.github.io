@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <script>
+    function diffArray(arr1, arr2) {
+        var newArr = [];
+        var x = [];
+        var y = 0;
+        if (arr1.length >= arr2.length) {
+            for (i = 0; i <= arr1.length - 1; i++) {
+                for (j = 0; j <= arr1.length - 1; j++) {
+                    if (arr1[i] == arr2[j])
+                        x.push(arr1[i]);
+                }
+            }
+        } 
+        else {
+            for (i = 0; i <= arr2.length - 1; i++) {
+                for (j = 0; j <= arr2.length - 1; j++) {
+                    if (arr2[i] == arr1[j])
+                        x.push(arr2[i]);
+                }
+            }
+        }
+        for (i = 0; i <= arr1.length - 1; i++) {
+            for (j = 0; j <= x.length - 1; j++) {
+                if (arr1[i] == x[j]) {
+                    y += 1;
+                }
+
+            }
+            if (y === 0) {
+                newArr.push(arr1[i]);
+            }
+
+            for (i = 0; i <= arr2.length - 1; i++) {
+                for (j = 0; j <= x.length - 1; j++) {
+                    if (arr2[i] == x[j]) {
+                        y += 1;
+                    }
+
+                }
+                if (y === 0) {
+                    newArr.push(arr2[i]);
+                }
+				
+            }
+            document.write(x);
+            console.log(x)
+        }
+
+            diffArray([1, 2, 3, 5, 6, 7, 4], [1, 2, 3, 4, 5, 7]);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

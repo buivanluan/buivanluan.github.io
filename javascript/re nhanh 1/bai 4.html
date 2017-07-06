@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <script>
+    var user = {
+        username: "",
+        password: "",
+        confirm: ""
+    }
+
+    function kiemtra() {
+        user.username = prompt("hãy nhập vào username");
+        if (user.username == "" || user.username.length > 20) {
+            do {
+                user.username = prompt("hãy nhập lai username");
+            }
+            while (user.username == "" || user.username.length > 20);
+
+        } 
+        else if (user.username != "" || user.username.length < 20){
+            user.password = prompt("hãy nhập vào password");
+            if (user.password.length < 6 || user.password.length > 20) {
+             	do {
+                    user.password = prompt("hãy nhập lai password");
+                }
+                while (user.password.length < 6 || user.password.length > 20);
+             }
+
+            else if( user.password.length > 6 || user.password.length < 20){
+                user.confirm = prompt("hãy nhập vào confirm");
+                if (user.password !== user.confirm) {
+                    do {
+                        user.confirm = prompt("hãy nhập lai confirm");
+                    }
+                    while (user.password !== user.confirm)
+                }
+            	else{
+            		document.write("bạn đã đăng nhập thành công")
+            	}
+            } 
+        }
+	}
+
+        kiemtra();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

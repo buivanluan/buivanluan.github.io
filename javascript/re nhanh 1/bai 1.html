@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script >
+		var arr = [];
+		arr.push(1);
+		arr.push(1);
+		function sosanh() {
+			
+				if (typeof arr[0] != "number"){
+					document.write("phan tu dau khong phai la so" + "<br>")
+
+				}
+				else{
+					var x = arr[0];
+				}
+				if (typeof arr[1]!="number") {
+					document.write("phan tu thu 2 khong phai la so")
+				}
+				else{
+					var y = arr[1];
+				}
+				if (typeof arr[0] == "number" && typeof arr[1] == "number") {
+					if (x >= y) {
+						document.write("so lon hon la :" + x)
+					}
+					else{
+						document.write("so lon hon la :" + y)
+					}
+				}
+		}
+	sosanh();
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

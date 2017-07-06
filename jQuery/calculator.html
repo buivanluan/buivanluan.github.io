@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <style>
+    body {
+        box-sizing: border-box;
+        background: url('http://gocchiase360.com/wp-content/uploads/2015/06/hinh-anh-phong-canh-thien-nhien-dep-nhat-the-gioi-1.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    
+    .container {
+        width: 500px;
+        border: 2px solid #ff9600;
+        border-radius: 5px;
+        padding-bottom: 30px;
+        margin: 100px auto;
+        box-shadow: 20px 20px 0 0 black;
+    }
+    
+    button {
+        height: 50px;
+        width: 100px;
+        margin: 5px;
+        border-radius: 5px;
+        font-size: 30px;
+        border: 5px solid #ff9600;
+        box-shadow: 0 6px 2px 0 black;
+        position: relative;
+    }
+    
+    button:active {
+        box-shadow: none;
+        position: relative;
+        top: 5px;
+    }
+    
+    @font-face {
+        font-family: "luan";
+        src: url('Blazed.ttf');
+    }
+    
+    p#result {
+        border: 5px solid black;
+        height: 50px;
+        margin: 10px;
+        font-size: 30px;
+        line-height: 50px;
+        padding: 0 10px;
+        text-align: right;
+        overflow: hidden;
+        margin: 45px 35px;
+        margin-top: 30px;
+        background: #fff;
+        font-weight: bold;
+        opacity: 1;
+    }
+    
+    #theme {
+        width: 200px;
+        height: 50px;
+        position: relative;
+        top: 250px;
+        left: 950px;
+        background: #fff;
+        font-size: 20px;
+        border-radius: 5px;
+        line-height: 50px;
+        text-align: center;
+        box-shadow: 0px 10px 3px 0 black;
+    }
+    
+    #theme:active {
+        box-shadow: none;
+        position: relative;
+        top: 260px;
+        left: 950px;
+    }
+    
+    .body {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    
+    h1 {
+        text-align: center;
+        margin-bottom: 0;
+        font-family: "luan";
+    }
+    </style>
+</head>
+
+<body>
+    <div id="theme">
+        Change theme
+    </div>
+    <div class="container">
+        <div class="display">
+            <h1>Calculator</h1>
+            <p id="result"></p>
+        </div>
+        <div class="body">
+            <button type="text" id="canbachai">&#8730;</button>
+            <button type="text" id="binhphuong">x&sup2;</button>
+            <button type="text" id="giaithua">!</button>
+            <button type="text" id="loga">log</button>
+            <button type="text" id="phantram">&percnt;</button>
+            <button type="text" id="amduong">&pm; </button>
+            <button type="text" id="clearone">&larr;</button>
+            <button type="text" id="pushcong">&#43;</button>
+            <button type="text" id="push1">1</button>
+            <button type="text" id="push2">2</button>
+            <button type="text" id="push3">3</button>
+            <button type="text" id="pushtru"> &#45;</button>
+            <button type="text" id="push4">4</button>
+            <button type="text" id="push5">5</button>
+            <button type="text" id="push6">6</button>
+            <button type="text" id="pushnhan">x</button>
+            <button type="text" id="push7">7</button>
+            <button type="text" id="push8">8</button>
+            <button type="text" id="push9">9</button>
+            <button type="text" id="pushchia"> &#247;</button>
+            <button type="text" id="push0">0</button>
+            <button type="text" id="pushdot">.</button>
+            <button type="text" id="xoa">c</button>
+            <button type="text" id="ketqua">&equals;</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript">
+    $('#result').html("0");
+
+    $('#xoa').click(function() {
+        $('#result').html("0");
+
+    });
+
+    $('#push1').click(function() {
+        if ($('#result').html() == "0")
+            $('#result').html("1");
+        else {
+            $('#result').html($('#result').html() + "1")
+        }
+    });
+
+    $('#push2').click(function() {
+        if ($('#result').html() == "0")
+            $('#result').html("2");
+        else {
+            $('#result').html($('#result').html() + "2")
+        }
+    });
+    $('#push3').click(function() {
+        if ($('#result').html() == "0")
+            $('#result').html("3");
+        else {
+            $('#result').html($('#result').html() + "3")
+        }
+    });
+    $('#push4').click(function() {
+        if ($('#result').html() == "0")
+            $('#result').html("4");
+        else {
+            $('#result').html($('#result').html() + "4")
+        }
+    });
+    $('#push5').click(function() {
+        if ($('#result').html() == "0")
+            $('#result').html("5");
+        else {
+            $('#result').html($('#result').html() + "5")
+        }
+    });
+    $('#push6').click(function() {
+        if ($('#result').html() == "0")
+            $('#result').html("6");
+        else {
+            $('#result').html($('#result').html() + "6")
+        }
+    });
+    $('#push7').click(function() {
+        if ($('#result').html() == "0")
+            $('#result').html("7");
+        else {
+            $('#result').html($('#result').html() + "7")
+        }
+    });
+    $('#push8').click(function() {
+        if ($('#result').html() == "0")
+            $('#result').html("8");
+        else {
+            $('#result').html($('#result').html() + "8")
+        }
+    });
+    $('#push9').click(function() {
+        if ($('#result').html() == "0")
+            $('#result').html("9");
+        else {
+            $('#result').html($('#result').html() + "9")
+        }
+        $('#push0').click(function() {
+            if ($('#result').html() == "0")
+                $('#result').html("0");
+            else {
+                $('#result').html($('#result').html() + "0")
+            }
+        });
+    });
+
+    $('#pushdot').click(function() {
+
+        var x = $('#result').html();
+        var y = x.slice(x.length - 1, x.length);
+        if (y != "+" & y != "-" & y != "*" & y != "/" & y != ".") {
+            $('#result').html($('#result').html() + '.')
+        }
+
+    });
+
+
+    $('#pushcong').click(function() {
+
+        var x = $('#result').html();
+        var y = x.slice(x.length - 1, x.length);
+        if (y == "+" || y == "-" || y == "*" || y == "/" || y == ".") {
+            var x = $('#result').html();
+            $('#result').html(x.slice(0, x.length - 1) + '+');
+        } else if (y != "+" & y != "-" & y != "*" & y != "/" & y != ".") {
+            $('#result').html($('#result').html() + '+');
+        }
+
+    });
+
+    $('#pushtru').click(function() {
+        var x = $('#result').html();
+        var y = x.slice(x.length - 1, x.length);
+        if (y == "+" || y == "-" || y == "*" || y == "/" || y == ".") {
+            var x = $('#result').html();
+            $('#result').html(x.slice(0, x.length - 1) + '-');
+        } else if (y != "+" & y != "-" & y != "*" & y != "/" & y != ".") {
+            $('#result').html($('#result').html() + '-');
+        }
+    });
+
+    $('#pushnhan').click(function() {
+
+        if ($('#result').html() !== "0")
+            var x = $('#result').html();
+        var y = x.slice(x.length - 1, x.length);
+        if (y == "+" || y == "-" || y == "*" || y == "/" || y == ".") {
+            var x = $('#result').html();
+            $('#result').html(x.slice(0, x.length - 1) + '*');
+        } else if (y != "+" & y != "-" & y != "*" & y != "/" & y != ".") {
+            $('#result').html($('#result').html() + '*');
+        }
+    });
+    $('#pushchia').click(function() {
+
+        if ($('#result').html() !== "0")
+            var x = $('#result').html();
+        var y = x.slice(x.length - 1, x.length);
+        if (y == "+" || y == "-" || y == "*" || y == "/" || y == ".") {
+            var x = $('#result').html();
+            $('#result').html(x.slice(0, x.length - 1) + '/')
+        } else if (y != "+" & y != "-" & y != "*" & y != "/" & y != ".") {
+            $('#result').html($('#result').html() + '/');
+        }
+    });
+    $('#ketqua').click(function() {
+        var x = eval($('#result').html());
+        $('#result').html(x);
+    });
+    $('#canbachai').click(function() {
+        var x = eval($('#result').html());
+        $('#result').html(Math.sqrt(Number(x)));
+    });
+    $('#binhphuong').click(function() {
+        var x = eval($('#result').html());
+        x = Number(x) * Number(x);
+        $('#result').html(x);
+    });
+    $('#giaithua').click(function() {
+        var x = eval($('#result').html());
+        var n = Number(x);
+        var y = 1;
+        for (var i = 1; i <= n; i++) {
+            y = y * i
+        }
+        $('#result').html(y)
+    });
+
+    $('#clearone').click(function() {
+        var x = $('#result').html();
+        $('#result').html(x.slice(0, x.length - 1))
+    });
+
+    $('#phantram').click(function() {
+        var x = $('#result').html();
+        var y = x.search(/[*]/g);
+        var a = Number(x.slice(0, y));
+        var b = Number(x.slice(y + 1, x.length));
+        var z = (a * b) / 100;
+        $('#result').html(z);
+
+    });
+
+    $('#loga').click(function() {
+        var x = eval($('#result').html());
+        $('#result').html(Math.log(x));
+    });
+
+    $('#amduong').click(function() {
+        var x = $('#result').html();
+        for (i = x.length - 1; i >= 0; i--) {
+            if (x[i] == "+" || x[i] == "-" || x[i] == "*" || x[i] == "/") {
+                break;
+            }
+            console.log(i)
+        }
+        a = x.slice(0, i + 1);
+        b = x.slice(i + 1, x.length);
+        if (a[a.length - 2] !== "+" & a[a.length - 2] !== "-" & a[a.length - 2] !== "*" & a[a.length - 2] !== "/" || a[a.length - 2] == "") {
+
+            if (a[a.length - 1] == "+" || a == "") {
+                a = a.slice(0, [a.length - 1])
+                $('#result').html(a + "-" + b);
+            } else if (a[a.length - 1] == "-") {
+                a = a.slice(0, [a.length - 1])
+                $('#result').html(a + "+" + b);
+            } else if (a[a.length - 1] == "*" & b !== "") {
+
+                $('#result').html(a + "(" + "-" + b + ")");
+            } else if (a[a.length - 1] == "/" & b !== "") {
+
+                $('#result').html(a + "(" + "-" + b + ")")
+            }
+        }
+    });
+
+    function doitheme() {
+        var bg = {
+            bd: ["url('http://gocchiase360.com/wp-content/uploads/2015/06/hinh-anh-phong-canh-thien-nhien-dep-nhat-the-gioi-1.jpg')", "url('http://hinhanhdep.pro/content/uploads/2016/07/nh-dep-3d-5.jpg')", "url('http://khohinhnen.com/wp-content/uploads/2015/01/hinh-anh-phong-canh-dep-6.jpg')", "url('http://khohinhnen.com/wp-content/uploads/2015/01/hinh-anh-phong-canh-dep-2.jpg')"],
+            cont: ["url('http://hinhanhdep.pro/content/uploads/2016/07/nh-dep-3d-5.jpg')", "url('http://gocchiase360.com/wp-content/uploads/2015/06/hinh-anh-phong-canh-thien-nhien-dep-nhat-the-gioi-1.jpg')", "url('http://khohinhnen.com/wp-content/uploads/2015/01/hinh-anh-phong-canh-dep-6.jpg')", "url('http://khohinhnen.com/wp-content/uploads/2015/01/hinh-anh-phong-canh-dep-2.jpg')"],
+            bor: ["3px", "5px", "10px", "20px"],
+        }
+        $('body').css("background", bg['bd'][n]);
+        $('.container').css("background", bg['cont'][n]);
+        $('button').css("border-radius", bg['bor'][n]);
+    }
+    var n = 0;
+
+    $('#theme').click(function() {
+        $('#theme').effect("bounce", {
+            times: 5
+        }, 1000);
+        n += 1
+        if (n == 4) {
+            n = 0
+        }
+        doitheme();
+    });
+    $("button").click(function() {
+        $(this).effect("bounce", {
+            times: 3
+        }, 1000);
+    });
+    $(document).keydown(function(key) {
+        switch (parseInt(key.which, 10)) {
+            case 49:
+                if ($('#result').html() == "0")
+                    $('#result').html("1");
+                else {
+                    $('#result').html($('#result').html() + "1")
+                }
+                $('#push1').effect("bounce", {times: 3}, 1000);
+                break;
+            case 50:
+                if ($('#result').html() == "0")
+                    $('#result').html("2");
+                else {
+                    $('#result').html($('#result').html() + "2")
+                }
+                $('#push2').effect("bounce", {times: 3}, 1000);
+                break;
+            case 51:
+                if ($('#result').html() == "0")
+                    $('#result').html("3");
+                else {
+                    $('#result').html($('#result').html() + "3")
+                }
+                $('#push3').effect("bounce", {times: 3}, 1000);
+                break;
+            case 52:
+                if ($('#result').html() == "0")
+                    $('#result').html("4");
+                else {
+                    $('#result').html($('#result').html() + "4")
+                }
+                $('#push4').effect("bounce", {times: 3}, 1000);
+                break;
+            case 53:
+                if ($('#result').html() == "0")
+                    $('#result').html("5");
+                else {
+                    $('#result').html($('#result').html() + "5")
+                }
+                $('#push5').effect("bounce", {times: 3}, 1000);
+                break;
+            case 54:
+                if ($('#result').html() == "0")
+                    $('#result').html("6");
+                else {
+                    $('#result').html($('#result').html() + "6")
+                }
+                $('#push6').effect("bounce", {times: 3}, 1000);
+                break;
+            case 55:
+                if ($('#result').html() == "0")
+                    $('#result').html("7");
+                else {
+                    $('#result').html($('#result').html() + "7")
+                }
+                $('#push7').effect("bounce", {times: 3}, 1000);
+                break;
+            case 56:
+                if ($('#result').html() == "0")
+                    $('#result').html("8");
+                else {
+                    $('#result').html($('#result').html() + "8")
+                }
+                $('#push8').effect("bounce", {times: 3}, 1000);
+                break;
+            case 57:
+                if ($('#result').html() == "0")
+                    $('#result').html("9");
+                else {
+                    $('#result').html($('#result').html() + "9")
+                }
+                $('#push9').effect("bounce", {times: 3}, 1000);
+                break;
+            case 48:
+                if ($('#result').html() == "0")
+                    $('#result').html("0");
+                else {
+                    $('#result').html($('#result').html() + "0")
+                }
+                $('#push0').effect("bounce", {times: 3}, 1000);
+                break;
+
+
+        }
+    });
+    </script>
+</body>
+
+</html>

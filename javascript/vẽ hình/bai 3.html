@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <script>
+    var str = '';
+
+    function printSquare(n) {
+        for (var i = 1; i <= n; i++) {
+            for (var j = 1; j <= 2 * n-1; j++) {
+            	if (j >= i && j <= 2*n-i) {
+                    str += ' * ';
+                }
+                else{
+                	str += ' &nbsp;&nbsp;';
+                }
+                	
+            }
+			
+          str += '<br>';  
+        }
+        document.write(str);
+ }
+        printSquare(4);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

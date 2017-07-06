@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <style type="text/css" media="screen">
+
+    </style>
+</head>
+
+<body>
+    <p class="p1">11111111111Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p class="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p class="p3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <script type="text/javascript">
+    function changeFontSize(n) {
+        var x = document.getElementsByTagName("p")
+        for (var i = 0; i < x.length; i++) {
+
+            x[i].style.fontSize = n + "px";
+        }
+    }
+    changeFontSize(20)
+
+    function increaseFontSize(n) {
+
+        var y = document.getElementsByTagName("p");
+        var z = y[n].style.fontSize.slice(0, y[n].style.fontSize.search("px"));
+        z = Number(z)
+        if (z <= 29) {
+            y[n].style.fontSize = z + 1 + "px";
+        }
+    }
+    increaseFontSize(1);
+
+    function decreaseFontSize(n) {
+
+        var y = document.getElementsByTagName("p");
+        var z = y[n].style.fontSize.slice(0, y[n].style.fontSize.search("px"));
+        z = Number(z)
+        if (z >= 11) {
+            y[n].style.fontSize = z - 1 + "px";
+        }
+    }
+    decreaseFontSize(2);
+
+    function changecolor() {
+
+        var y = document.getElementsByTagName("p");
+
+        y[0].style.color = "blue";
+        y[1].style.color = "yellow";
+        y[2].style.color = "red";
+    }
+    changecolor();
+
+    function changeBgcolor(n) {
+
+        var y = document.getElementsByTagName("body");
+
+        y[0].style.backgroundColor = n;
+
+    }
+    changeBgcolor("#8D4747");
+
+    function copycontent() {
+
+        var y = document.getElementsByTagName("p");
+        y[0].innerText = y[1].innerText;
+    }
+    copycontent();
+    </script>
+</body>
+
+</html>
